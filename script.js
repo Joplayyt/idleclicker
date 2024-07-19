@@ -40,4 +40,3 @@ setInterval(() => {
     autoClick();
 }, 1000);
 
-// You can enhance this part with additional features, e.g., more upgrades, automation, etc.
