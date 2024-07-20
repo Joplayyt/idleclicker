@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
 #game-container {
@@ -15,18 +16,21 @@ body {
     max-width: 600px;
     margin: 50px auto;
     position: relative;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 h1 {
     color: #ff6347;
     font-size: 2.5em;
     margin-bottom: 20px;
+    transition: color 0.3s;
 }
 
 #resource {
     font-size: 2.5em;
     color: #2e8b57;
     margin: 20px 0;
+    transition: color 0.3s;
 }
 
 button {
@@ -87,4 +91,35 @@ button:hover::before {
 
 button.pulsate {
     animation: buttonPulse 1s infinite;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background: linear-gradient(to right, #333, #555);
+    color: #eee;
+}
+
+body.dark-theme #game-container {
+    background: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme h1 {
+    color: #ff7e5f;
+}
+
+body.dark-theme #resource {
+    color: #8fbc8f;
+}
+
+body.dark-theme button {
+    background: #ff7e5f;
+}
+
+body.dark-theme button:hover {
+    background: #ff5e5e;
+}
+
+body.dark-theme button:active {
+    background: #ff4c4c;
 }
