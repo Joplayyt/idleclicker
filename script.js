@@ -2,11 +2,13 @@ let resource = 0;
 let upgradeCost = 10;
 let upgradeMultiplier = 1;
 let cps = 0;
+let darkTheme = false;
 
 const resourceDisplay = document.getElementById('resource');
 const clickButton = document.getElementById('clickButton');
 const upgradeButton = document.getElementById('upgradeButton');
 const cpsDisplay = document.getElementById('cps');
+const themeButton = document.getElementById('themeButton');
 
 // Click button logic
 clickButton.addEventListener('click', () => {
@@ -40,3 +42,8 @@ setInterval(() => {
     autoClick();
 }, 1000);
 
+// Theme button logic
+themeButton.addEventListener('click', () => {
+    darkTheme = !darkTheme;
+    document.body.classList.toggle('dark-theme', darkTheme);
+});
